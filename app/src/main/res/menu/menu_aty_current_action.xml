@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.action.onehundred.onehundreddays.AtyEditAction">
+    <item android:id="@+id/current_action_record" android:title="查看记录"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/current_action_delete" android:title="重选行动"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

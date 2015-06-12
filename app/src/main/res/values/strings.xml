@@ -1,0 +1,52 @@
+<resources>
+
+    <string name="category_exercise_1">健身</string>
+    <string name="category_life_2">修身</string>
+    <string name="category_study_3">学习</string>
+    <string name="category_health_4">养生</string>
+    <string name="category_default">自定义</string>
+    <string name="app_name">百日行动</string>
+
+
+        <string name="category_exercise_aerobics">健美操</string>
+        <string name="category_exercise_plank">平板支撑</string>
+        <string name="category_exercise_pullup">引体向上</string>
+        <string name="category_exercise_pushup">俯卧撑</string>
+        <string name="category_exercise_running">跑步</string>
+        <string name="category_exercise_situp">仰卧起坐</string>
+        <string name="category_exercise_yoga">瑜伽</string>
+
+    <string name="action_category_health_egg">吃鸡蛋</string>
+    <string name="action_category_health_foot_bath">泡脚</string>
+    <string name="action_category_health_get_up">早起</string>
+    <string name="action_category_health_tooth_brushing">刷牙</string>
+    <string name="action_category_health_walk">散步</string>
+    <string name="action_category_health_milk">牛奶</string>
+    <string name="action_category_health_fruit">水果</string>
+
+    <string name="action_category_life_family">家庭</string>
+    <string name="action_category_life_friend">朋友</string>
+    <string name="action_category_life_love">爱情</string>
+    <string name="action_category_life_no_delay">今日事今日毕</string>
+    <string name="action_category_life_smile">微笑</string>
+    <string name="action_category_life_speak">不说脏话</string>
+    <string name="action_category_life_think">反思</string>
+
+    <string name="action_category_study_calligraphy">练字</string>
+    <string name="action_category_study_diary">日记</string>
+    <string name="action_category_study_draw">绘画</string>
+    <string name="action_category_study_photograph">摄影</string>
+    <string name="action_category_study_reading">阅读</string>
+    <string name="action_category_study_ted">TED</string>
+    <string name="action_category_study_word">背单词</string>
+
+    <string name="add_action">添加行动</string>
+    <string name="record">记录</string>
+    <string name="every_record">每日记录</string>
+    <string name="give_up_action">放弃行动</string>
+    <string name="give_up_action_hint">你确定要放弃当前行动，选择新的行动吗？</string>
+    <string name="title_activity_aty_welcome">AtyWelcome</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

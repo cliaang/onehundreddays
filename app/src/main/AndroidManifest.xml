@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.action.onehundred.onehundreddays" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <activity android:name=".AtyCurrentAction" >
+
+        </activity>
+        <activity
+            android:name=".AtyActionCategory"
+            android:parentActivityName=".AtyCurrentAction" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.action.onehundred.onehundreddays.AtyCurrentAction" />
+        </activity>
+        <activity
+            android:name=".AtyActionList"
+            android:parentActivityName=".AtyActionCategory" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.action.onehundred.onehundreddays.AtyActionCategory" />
+        </activity>
+        <activity
+            android:name=".AtyEditAction"
+            android:parentActivityName=".AtyActionList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.action.onehundred.onehundreddays.AtyActionList" />
+        </activity>
+        <activity
+            android:name=".AtyEveryDayRecord"
+            android:parentActivityName=".AtyCurrentAction" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.action.onehundred.onehundreddays.AtyCurrentAction" />
+        </activity>
+        <activity
+            android:name=".AtyDisplayFmt"
+            android:parentActivityName=".AtyCurrentAction" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.action.onehundred.onehundreddays.AtyCurrentAction" />
+        </activity>
+        <activity
+            android:name=".AtyWelcome"
+            android:label="@string/title_activity_aty_welcome" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
