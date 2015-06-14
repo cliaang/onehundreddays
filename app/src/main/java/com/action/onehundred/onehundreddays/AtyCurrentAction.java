@@ -1,26 +1,33 @@
 package com.action.onehundred.onehundreddays;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 
+import java.io.File;
 import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Date;
@@ -30,6 +37,7 @@ public class AtyCurrentAction extends ActionBarActivity {
     public final static String DayIndex = "dayIndex";
     private int dayIndex;
     private boolean hasAction;
+    private boolean doubleClickBack;
 
     private Action currentAction= new Action("");
     @Override
@@ -152,6 +160,18 @@ public class AtyCurrentAction extends ActionBarActivity {
                 return true;
             }
         });
+        menu.findItem(R.id.current_action_share).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                //调用所有的能发送text的应用
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_to_others));
+                startActivity(intent);
+                return true;
+            }
+        });
         menu.findItem(R.id.current_action_delete).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -163,7 +183,10 @@ public class AtyCurrentAction extends ActionBarActivity {
                                 SharedPreferences sp = getSharedPreferences(Config.CurrentAction, Context.MODE_PRIVATE);
                                 sp.edit().clear().apply();
                                 sp = getSharedPreferences(Config.ActionConfig,Context.MODE_PRIVATE);
-                                sp.edit().putBoolean(Config.ActionConfigHasAction,false);
+                                sp.edit().putBoolean(Config.ActionConfigHasAction,false).apply();
+                                Intent i = new Intent(AtyCurrentAction.this, AtyCurrentAction.class);
+                                startActivity(i);
+                                finish();
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -177,6 +200,22 @@ public class AtyCurrentAction extends ActionBarActivity {
             }
         });
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleClickBack) {
+            super.onBackPressed();
+            return;
+        }
+        doubleClickBack = true;
+        Toast.makeText(AtyCurrentAction.this,getString(R.string.confirm_exit),Toast.LENGTH_LONG).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+              doubleClickBack = false;
+            }
+        },2000);
     }
 
 }

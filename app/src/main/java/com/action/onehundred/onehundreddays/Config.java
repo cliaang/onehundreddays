@@ -20,8 +20,8 @@ public class Config {
 
     public static final int[] ActionCategoryStringResource = {
             R.string.category_exercise_1,
-            R.string.category_life_2,
             R.string.category_study_3,
+            R.string.category_life_2,
             R.string.category_health_4
     };
 
