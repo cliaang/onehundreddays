@@ -209,7 +209,7 @@ public class AtyCurrentAction extends ActionBarActivity {
             return;
         }
         doubleClickBack = true;
-        Toast.makeText(AtyCurrentAction.this,getString(R.string.confirm_exit),Toast.LENGTH_LONG).show();
+        Toast.makeText(AtyCurrentAction.this,getString(R.string.confirm_exit),Toast.LENGTH_SHORT).show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
