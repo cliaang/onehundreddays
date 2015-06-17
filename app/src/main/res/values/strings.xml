@@ -49,4 +49,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="start">开始行动</string>
+    <string name="reselect_action">重选行动</string>
+    <string name="share">分享</string>
+    <string name="share_to_others">我用“百日行动”APP培养好习惯，一起来改变自己吧！</string>
+    <string name="confirm_exit">再按一次返回键退出百日行动</string>
 </resources>
